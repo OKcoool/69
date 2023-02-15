@@ -1,0 +1,115 @@
+In einer Schule gibt es unterschiedliche Personen, vereinfachend sagen wir es gibt Schüler und Lehrer. Beide haben einen Nachnamen und ein Alter. Jede Person kann Geburtstag haben. In diesem Fall erhöht sich das Alter der Person. Ein Lehrer hat zusätzlich noch einen Unterrichtsfach, in welchem er hauptsächlich tätig ist.
+
+Aufgabe 1:
+
+Erstelle ein Klassendiagramm.
+
+
+
+Aufgabe 2:
+
+Die Klasse Person hat die Attribute Nachname und Alter, die an die Klassen Schüler und Lehrer vererbt werden. Zusätzlich braucht der Lehrer in seinem Konstruktor noch das Unterrichtsfach.
+Implementieren Sie die Konstruktoren der Klassen.
+
+
+Aufgabe 3:
+
+Erweitern Sie das Programm um die Methode Geburtstag in der Basisklasse
+
+Aufgabe 4:
+
+Bisher bekommt der Schüler und der Lehrer  von der Basisklasse Person die Methode Bday geerbt.
+
+Jetzt soll in der Methode Bday des Schülers noch geprüft werden, ob dieser volljährig, also 18, geworden ist.
+Falls ja, soll das neue Attribut "jetztvolljährig" auf true gesetzt werden.
+
+Falls der Schüler volljährig ist, soll die Ausgabe  "Der Schüler ist jetzt volljährig" erscheinen.
+Aufgabe 1:
+Klassendiagramm
+
+sql
+Copy code
+                  +-------------+
+                  |    Person   |
+                  +-------------+
+                  | Nachname    |
+                  | Alter       |
+                  +-------------+
+                          ^
+                          |
+          +---------------+-----------------+
+          |                                   |
+  +-------------+                      +------------+
+  |   Schüler   |                      |   Lehrer   |
+  +-------------+                      +------------+
+  |             |                      |            |
+  +-------------+                      +------------+
+                                           |
+                                           |
+                                  +------------------+
+                                  | Unterrichtsfach  |
+                                  +------------------+
+Aufgabe 2: Implementierung der Konstruktoren
+
+python
+Copy code
+class Person:
+    def __init__(self, nachname, alter):
+        self.nachname = nachname
+        self.alter = alter
+
+class Schüler(Person):
+    def __init__(self, nachname, alter):
+        super().__init__(nachname, alter)
+
+class Lehrer(Person):
+    def __init__(self, nachname, alter, fach):
+        super().__init__(nachname, alter)
+        self.fach = fach
+Aufgabe 3: Erweiterung um die Methode Geburtstag
+
+python
+Copy code
+class Person:
+    def __init__(self, nachname, alter):
+        self.nachname = nachname
+        self.alter = alter
+
+    def geburtstag(self):
+        self.alter += 1
+
+class Schüler(Person):
+    def __init__(self, nachname, alter):
+        super().__init__(nachname, alter)
+
+class Lehrer(Person):
+    def __init__(self, nachname, alter, fach):
+        super().__init__(nachname, alter)
+        self.fach = fach
+Aufgabe 4: Anpassung der Methode Bday des Schülers
+
+python
+Copy code
+class Person:
+    def __init__(self, nachname, alter):
+        self.nachname = nachname
+        self.alter = alter
+
+    def geburtstag(self):
+        self.alter += 1
+
+class Schüler(Person):
+    def __init__(self, nachname, alter):
+        super().__init__(nachname, alter)
+        self.jetztvolljährig = False
+
+    def bday(self):
+        super().geburtstag()
+        if self.alter >= 18:
+            self.jetztvolljährig = True
+            print("Der Schüler ist jetzt volljährig")
+
+class Lehrer(Person):
+    def __init__(self, nachname, alter, fach):
+        super().__init__(nachname, alter)
+        self.fach = fach
