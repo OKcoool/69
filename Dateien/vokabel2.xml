@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vokabelliste>
+	<Vokabel>
+		<deutsch>Angestellter</deutsch>
+		<english>employee</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Arbeiter</deutsch>
+		<english>worker</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Arbeitgeber</deutsch>
+		<english>employer</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Beruf</deutsch>
+		<english>job</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Beschaeftigung</deutsch>
+		<english>occupation</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Pendler</deutsch>
+		<english>commuter</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Azubi</deutsch>
+		<english>apprentice</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Bewerbung</deutsch>
+		<english>application</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Arbeitslosigkeit</deutsch>
+		<english>unemployment</english>
+	</Vokabel>
+	<Vokabel>
+		<deutsch>Gehalt</deutsch>
+		<english>salary</english>
+	</Vokabel>
+</Vokabelliste>
