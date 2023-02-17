@@ -28,7 +28,7 @@ def berechne_kosten(typ, gaesteliste, alkohol=True, dekoration="normal"):
 
 
 # Kosten für ein Abendessen mit 10 Gästen, alkoholischen Getränken und normaler Dekoration
-print(berechne_kosten("Abendessen", 10, True, "normal")) # Ausgabe: 450.0
+print(berechne_kosten("Abendessen", 10, True, "normal"))
 
 # Kosten für eine Geburtstagsfeier mit 6 Gästen, alkoholfreien Getränken und exklusiver Dekoration
-print(berechne_kosten("Geburtstag", 6, False, "exklusiv")) # Ausgabe: 295.5
+print(berechne_kosten("Geburtstag", 6, False, "exklusiv"))
